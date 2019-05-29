@@ -1,0 +1,8 @@
+apt-get source libusb (to download source code of given package)
+ dpkg-source -x libusb_0.1.12-23.3ubuntu1.dsc(untar given package)
+cd libusb-0.1.12/
+mkdir build
+../configure(in configure enable r disable packages required)
+make -j8 (compiling)
+make check (testing packages)
+dpkg-buildpackage -uc -us(to get .deb files)
